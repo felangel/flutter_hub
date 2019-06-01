@@ -111,6 +111,13 @@ class _SearchResultItem extends StatelessWidget {
           color: Theme.of(context).primaryColor,
         ),
       ),
+      trailing: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Icon(Icons.star, color: Colors.yellow),
+          Text('${item.stars}')
+        ],
+      ),
       onTap: () async {
         if (await canLaunch(item.htmlUrl)) {
           await launch(item.htmlUrl);
