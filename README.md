@@ -9,7 +9,8 @@ For help getting started with Flutter, we utilized [online documentation](https:
 samples, guidance on mobile development, and a full API reference.
 
 ## APIs
-https://developer.linkedin.com/docs/guide/v2/jobs/recommended-jobs#retrieve-recommended-job
+https://developer.linkedin.com/docs/guide/v2/jobs/recommended-jobs#retrieve-recommended-job </br>
+https://opensource.indeedeng.io/api-documentation/
 
 ## Contributors
 
