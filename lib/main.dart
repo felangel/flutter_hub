@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:meta/meta.dart';
-import 'package:github_repository/github_repository.dart';
+import 'package:github_repository/jobs_repository.dart';
 import 'package:flutter_hub/project_search/project_search.dart';
 import 'package:flutter_hub/profile_search/profile_search.dart';
 import 'package:flutter_hub/job_search/job_search.dart';
@@ -36,9 +36,9 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Hub',
+      title: 'FlutterHub',
       home: Scaffold(
-        appBar: AppBar(title: Text('Flutter Hub')),
+        appBar: AppBar(title: Text('FlutterHub')),
         body: _activeTab(_currentTabIndex),
         bottomNavigationBar: BottomNavigationBar(
           items: [
