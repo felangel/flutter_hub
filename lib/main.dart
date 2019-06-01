@@ -70,7 +70,10 @@ class _AppState extends State<App> {
       home: Scaffold(
         appBar: AppBar(
           title: Text('FlutterHub'),
-          leading: Image.asset('assets/flutter_logo.png'),
+          leading: Padding(
+            padding: const EdgeInsets.fromLTRB(12.0, 8.0, 0.0, 8.0),
+            child: Image.asset('assets/flutter_logo.png'),
+          ),
         ),
         body: _activeTab(_currentTabIndex),
         bottomNavigationBar: FancyBottomNavigation(
