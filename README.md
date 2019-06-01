@@ -22,7 +22,7 @@ https://opensource.indeedeng.io/api-documentation/
 ## Contributors
 
 Felix Angelov,
-Christina Kim,
+Christina Angeline,
 Ruchi Roy,
 Linda Zhou
 

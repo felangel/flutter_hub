@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:github_repository/github_repository.dart';
+import 'package:github_repository/jobs_repository.dart';
 import 'package:flutter_hub/project_search/bloc/bloc.dart';
 
 class ProjectSearch extends StatefulWidget {
@@ -111,7 +111,7 @@ class _SearchBody extends StatelessWidget {
         }
         if (state is SearchStateSuccess) {
           return state.items.isEmpty
-              ? Text('No Results')
+              ? Text('No Results. Please try again.')
               : Expanded(child: _SearchResults(items: state.items));
         }
       },
