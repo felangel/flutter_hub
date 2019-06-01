@@ -34,7 +34,7 @@ class _ProfileSearchState extends State<ProfileSearch>
     return Column(
       children: <Widget>[
         SearchBar(
-          hintText: 'Search for Flutter Profiles',
+          hintText: 'Search for Flutter developer profiles',
           onChanged: (text) {
             _searchBloc.dispatch(
               ProfileTextChanged(

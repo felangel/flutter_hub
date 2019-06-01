@@ -34,7 +34,7 @@ class _ProjectSearchState extends State<ProjectSearch>
     return Column(
       children: <Widget>[
         SearchBar(
-          hintText: 'Search for Flutter Projects',
+          hintText: 'Search for Flutter projects',
           onChanged: (text) {
             _searchBloc.dispatch(
               ProjectTextChanged(
