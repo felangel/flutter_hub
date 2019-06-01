@@ -13,9 +13,9 @@ https://developer.linkedin.com/docs/guide/v2/jobs/recommended-jobs#retrieve-reco
 
 ## Contributors
 
-Felix Angelov
-Christina Kim
-Ruchi Roy 
+Felix Angelov,
+Christina Kim,
+Ruchi Roy,
 Linda Zhou
 
 
