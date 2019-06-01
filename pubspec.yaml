@@ -14,5 +14,8 @@ dependencies:
   github_repository:
     path: github_repository
 
+  indeed_repository:
+    path: indeed_repository
+
 flutter:
   uses-material-design: true
