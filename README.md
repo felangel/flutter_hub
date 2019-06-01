@@ -1,4 +1,4 @@
-# flutter_hub
+# FlutterHub
 
 ## About 
 FlutterHub is a mobile application that allows developers to showcase their Flutter projects and hiring personnel to search for qualified, experienced Flutter developers. 
