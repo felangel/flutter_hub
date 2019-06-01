@@ -4,15 +4,20 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+  sdk: '>=2.0.0-dev.68.0 <3.0.0'
 
 dependencies:
   flutter:
-    sdk: flutter  
+    sdk: flutter
   flutter_bloc: ^0.15.0
-  url_launcher: ^4.0.3  
+  url_launcher: ^4.0.3
+  fancy_bottom_navigation: ^0.3.2
   github_repository:
     path: github_repository
+  reddit_repository:
+    path: reddit_repository
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/flutter_logo.png

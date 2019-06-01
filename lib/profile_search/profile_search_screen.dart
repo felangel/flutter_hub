@@ -104,7 +104,13 @@ class _SearchResultItem extends StatelessWidget {
       leading: CircleAvatar(
         child: Image.network(item.owner.avatarUrl),
       ),
-      title: Text(item.owner.login),
+      title: Text(
+        item.owner.login,
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          color: Theme.of(context).primaryColor,
+        ),
+      ),
       onTap: () async {
         if (await canLaunch(item.owner.htmlUrl)) {
           await launch(item.owner.htmlUrl);

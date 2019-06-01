@@ -1,0 +1,12 @@
+name: reddit_repository
+description: Reddit Repo
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.0.0-dev.68.0 <3.0.0"
+
+dependencies:
+  meta: ^1.1.6
+  bloc: ^0.14.0
+  equatable: ^0.2.0
+  http: ^0.12.0
