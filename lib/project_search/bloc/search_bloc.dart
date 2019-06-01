@@ -5,7 +5,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:bloc/bloc.dart';
 
 import 'package:github_repository/github_repository.dart';
-import 'package:flutter_hub/search/bloc/bloc.dart';
+import 'package:flutter_hub/project_search/bloc/bloc.dart';
 
 class SearchBloc extends Bloc<SearchEvent, SearchState> {
   final GithubRepository githubRepository;

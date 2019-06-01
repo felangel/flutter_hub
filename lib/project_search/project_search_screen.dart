@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:github_repository/github_repository.dart';
-import 'package:flutter_hub/search/bloc/bloc.dart';
+import 'package:flutter_hub/project_search/bloc/bloc.dart';
 
-class SearchScreen extends StatefulWidget {
+class ProjectSearch extends StatefulWidget {
   final GithubRepository githubRepository;
 
-  const SearchScreen({
+  const ProjectSearch({
     Key key,
     @required this.githubRepository,
   }) : super(key: key);
 
   @override
-  _SearchScreenState createState() => _SearchScreenState();
+  _ProjectSearchState createState() => _ProjectSearchState();
 }
 
-class _SearchScreenState extends State<SearchScreen> {
+class _ProjectSearchState extends State<ProjectSearch>
+    with AutomaticKeepAliveClientMixin {
   SearchBloc _searchBloc;
 
   @override
@@ -36,6 +38,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Column(
       children: <Widget>[
         _SearchBar(searchBloc: _searchBloc),
@@ -43,6 +46,9 @@ class _SearchScreenState extends State<SearchScreen> {
       ],
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class _SearchBar extends StatefulWidget {

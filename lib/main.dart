@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:meta/meta.dart';
 import 'package:github_repository/github_repository.dart';
-import 'package:flutter_hub/search/search.dart';
+import 'package:flutter_hub/project_search/project_search.dart';
+import 'package:flutter_hub/profile_search/profile_search.dart';
+import 'package:flutter_hub/job_search/job_search.dart';
 
 void main() {
   final GithubRepository _githubRepository = GithubRepository(
@@ -13,7 +15,9 @@ void main() {
   runApp(App(githubRepository: _githubRepository));
 }
 
-class App extends StatelessWidget {
+enum AppTab { project, profile, job }
+
+class App extends StatefulWidget {
   final GithubRepository githubRepository;
 
   const App({
@@ -22,12 +26,20 @@ class App extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  GithubRepository get githubRepository => widget.githubRepository;
+  AppTab _currentTabIndex = AppTab.project;
+
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Hub',
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter Hub')),
-        body: SearchScreen(githubRepository: githubRepository),
+        body: _activeTab(_currentTabIndex),
         bottomNavigationBar: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
@@ -38,13 +50,32 @@ class App extends StatelessWidget {
               icon: Icon(Icons.person),
               title: Text('Profiles'),
             ),
-             BottomNavigationBarItem(
+            BottomNavigationBarItem(
               icon: Icon(Icons.work),
               title: Text('Jobs'),
             ),
           ],
+          onTap: (index) {
+            setState(() {
+              _currentTabIndex = AppTab.values[index];
+            });
+          },
+          currentIndex: _currentTabIndex.index,
         ),
       ),
     );
+  }
+
+  Widget _activeTab(AppTab tab) {
+    switch (tab) {
+      case AppTab.project:
+        return ProjectSearch(githubRepository: githubRepository);
+      case AppTab.profile:
+        return ProfileSearch();
+      case AppTab.job:
+        return JobSearch();
+      default:
+        return ProjectSearch(githubRepository: githubRepository);
+    }
   }
 }
