@@ -36,9 +36,9 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Hub',
+      title: 'FlutterHub',
       home: Scaffold(
-        appBar: AppBar(title: Text('Flutter Hub')),
+        appBar: AppBar(title: Text('FlutterHub')),
         body: _activeTab(_currentTabIndex),
         bottomNavigationBar: BottomNavigationBar(
           items: [
