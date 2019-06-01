@@ -1,12 +1,12 @@
 import 'dart:async';
 
-import 'package:github_repository/jobs_repository.dart';
+import 'package:jobs_repository/jobs_repository.dart';
 
-class GithubRepository {
-  final GithubCache cache;
-  final GithubClient client;
+class JobsRepository {
+  final IndeedCache cache;
+  final IndeedClient client;
 
-  GithubRepository(this.cache, this.client);
+  JobsRepository(this.cache, this.client);
 
   Future<SearchResult> search(String term) async {
     if (cache.contains(term)) {

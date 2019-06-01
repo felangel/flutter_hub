@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
 
-import 'package:github_repository/jobs_repository.dart';
+import 'package:jobs_repository/jobs_repository.dart';
 
 abstract class SearchState extends Equatable {
   SearchState([List props = const []]) : super(props);

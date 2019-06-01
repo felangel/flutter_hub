@@ -1,5 +1,5 @@
-name: github_repository
-description: Github Repo
+name: jobs_repository
+description: Jobs Repo
 version: 1.0.0+1
 
 environment:

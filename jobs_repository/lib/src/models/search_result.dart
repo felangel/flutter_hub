@@ -1,4 +1,4 @@
-import 'package:github_repository/jobs_repository.dart';
+import 'package:jobs_repository/jobs_repository.dart';
 
 class SearchResult {
   final List<SearchResultItem> items;

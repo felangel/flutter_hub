@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:github_repository/jobs_repository.dart';
+import 'package:jobs_repository/jobs_repository.dart';
 
 class IndeedClient {
   final String baseUrl;
