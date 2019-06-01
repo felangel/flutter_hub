@@ -25,6 +25,7 @@ class _SearchScreenState extends State<SearchScreen> {
     _searchBloc = SearchBloc(
       githubRepository: widget.githubRepository,
     );
+    _searchBloc.dispatch(FetchInitial());
   }
 
   @override
@@ -96,9 +97,6 @@ class _SearchBody extends StatelessWidget {
     return BlocBuilder<SearchEvent, SearchState>(
       bloc: searchBloc,
       builder: (BuildContext context, SearchState state) {
-        if (state is SearchStateEmpty) {
-          return Text('Please enter a term to begin');
-        }
         if (state is SearchStateLoading) {
           return CircularProgressIndicator();
         }

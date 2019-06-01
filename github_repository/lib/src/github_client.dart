@@ -10,11 +10,12 @@ class GithubClient {
 
   GithubClient({
     http.Client httpClient,
-    this.baseUrl = "https://api.github.com/search/repositories?q=",
+    this.baseUrl = "https://api.github.com/search/repositories?q=topic:flutter",
   }) : this.httpClient = httpClient ?? http.Client();
 
   Future<SearchResult> search(String term) async {
-    final response = await httpClient.get(Uri.parse("$baseUrl$term"));
+    final termQuery = term.isEmpty ? '' : '+$term+in:name,readme,description';
+    final response = await httpClient.get(Uri.parse("$baseUrl$termQuery"));
     final results = json.decode(response.body);
 
     if (response.statusCode == 200) {

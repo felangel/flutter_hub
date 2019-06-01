@@ -33,14 +33,14 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
   }
 
   @override
-  SearchState get initialState => SearchStateEmpty();
+  SearchState get initialState => SearchStateLoading();
 
   @override
   Stream<SearchState> mapEventToState(SearchEvent event) async* {
     if (event is TextChanged) {
       final String searchTerm = event.text;
       if (searchTerm.isEmpty) {
-        yield SearchStateEmpty();
+        dispatch(FetchInitial());
       } else {
         yield SearchStateLoading();
         try {
@@ -51,6 +51,16 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
               ? SearchStateError(error.message)
               : SearchStateError('something went wrong');
         }
+      }
+    } else if (event is FetchInitial) {
+      yield SearchStateLoading();
+      try {
+        final results = await githubRepository.search('');
+        yield SearchStateSuccess(results.items);
+      } catch (error) {
+        yield error is SearchResultError
+            ? SearchStateError(error.message)
+            : SearchStateError('something went wrong');
       }
     }
   }

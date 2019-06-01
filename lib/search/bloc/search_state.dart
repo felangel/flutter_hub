@@ -6,11 +6,6 @@ abstract class SearchState extends Equatable {
   SearchState([List props = const []]) : super(props);
 }
 
-class SearchStateEmpty extends SearchState {
-  @override
-  String toString() => 'SearchStateEmpty';
-}
-
 class SearchStateLoading extends SearchState {
   @override
   String toString() => 'SearchStateLoading';
