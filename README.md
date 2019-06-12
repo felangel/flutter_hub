@@ -6,7 +6,7 @@
 FlutterHub is a mobile application that allows developers to showcase their Flutter projects and hiring personnel to search for qualified, experienced Flutter developers. 
 
 ```
-To foster a friendly, collaborative community for Flutter developers by offering a one-stop shop to…
+Goals of FlutterHub is to foster a friendly, collaborative community for Flutter developers by offering a one-stop shop to…
 Find Flutter projects
 Find other Flutter developers
 Catch up on Flutter news
