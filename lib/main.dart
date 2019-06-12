@@ -11,6 +11,7 @@ import 'package:flutter_hub/project_search/project_search.dart';
 import 'package:flutter_hub/profile_search/profile_search.dart';
 import 'package:flutter_hub/news_search/news_search.dart';
 import 'package:flutter_hub/github_search_bloc/bloc.dart';
+import 'package:catcher/catcher_plugin.dart';
 
 void main() {
   final GithubRepository _githubRepository = GithubRepository(
