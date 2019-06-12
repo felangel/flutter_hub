@@ -1,7 +1,16 @@
 # FlutterHub
 
+<center> <img width="853" alt="Screen Shot 2019-06-11 at 7 24 48 PM" src="https://user-images.githubusercontent.com/16420802/59315292-bf9cc100-8c7e-11e9-8b99-2b1a26e9b85a.png"> </center>
+
 ## About 
 FlutterHub is a mobile application that allows developers to showcase their Flutter projects and hiring personnel to search for qualified, experienced Flutter developers. 
+
+```
+To foster a friendly, collaborative community for Flutter developers by offering a one-stop shop to…
+Find Flutter projects
+Find other Flutter developers
+Catch up on Flutter news
+```
 
 ## Getting Started
 
@@ -19,11 +28,15 @@ Run command: `flutter run`
 https://developer.linkedin.com/docs/guide/v2/jobs/recommended-jobs#retrieve-recommended-job </br>
 https://opensource.indeedeng.io/api-documentation/
 
+## TODOs
+- [ ] Build garbage collector to catch Reddit news refresh
+- [ ] Add error handling
+- [ ] Enable a jobs API/data feed integration
+
 ## Contributors
 
-Felix Angelov,
-Christina Angeline,
-Ruchi Roy,
+Felix Angelov </br>
+Christina Angeline </br>
 Linda Zhou
 
 
