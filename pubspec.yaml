@@ -16,6 +16,7 @@ dependencies:
     path: github_repository
   reddit_repository:
     path: reddit_repository
+  catcher: ^0.0.8
 
 flutter:
   uses-material-design: true
