@@ -3,7 +3,6 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:reddit_repository/reddit_repository.dart';
-import 'package:catcher/catcher_plugin.dart';
 
 class RedditClient {
   final String baseUrl;

@@ -23,12 +23,6 @@ class _ProjectSearchState extends State<ProjectSearch>
   }
 
   @override
-  void dispose() {
-    _searchBloc.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     super.build(context);
     return Column(

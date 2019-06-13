@@ -23,12 +23,6 @@ class _ProfileSearchState extends State<ProfileSearch>
   }
 
   @override
-  void dispose() {
-    _searchBloc.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     super.build(context);
     return Column(
