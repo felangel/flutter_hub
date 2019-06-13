@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:reddit_repository/reddit_repository.dart';
 import 'package:flutter_hub/reddit_search_bloc/bloc.dart';
-import 'package:catcher/catcher_plugin.dart';
 
 class NewsSearch extends StatefulWidget {
   @override
@@ -23,12 +22,6 @@ class _NewsSearchState extends State<NewsSearch>
     _scrollController.addListener(_onScroll);
     _searchBloc = BlocProvider.of<RedditSearchBloc>(context);
     _searchBloc.dispatch(FetchArticles());
-  }
-
-  @override
-  void dispose() {
-    _searchBloc.dispose();
-    super.dispose();
   }
 
   @override

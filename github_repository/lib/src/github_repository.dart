@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:github_repository/github_repository.dart';
-import 'package:catcher/catcher_plugin.dart';
 
 class GithubRepository {
   final GithubCache cache;
